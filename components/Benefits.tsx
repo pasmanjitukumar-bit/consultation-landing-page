@@ -1,0 +1,4 @@
+import { content } from '@/lib/content';
+export default function Benefits() {
+  return <section className="bg-slate-50"><div className="section"><div className="text-center"><p className="eyebrow text-blue-600">YOUR FREE CONSULTATION</p><h2 className="heading mt-4">A little clarity.<br />A confident next step.</h2></div><div className="mt-9 grid gap-5 md:grid-cols-3">{content.benefits.map((item,i)=><article key={item.title} className="rounded-2xl border border-slate-200 bg-white p-7"><span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 font-bold text-blue-600" aria-hidden="true">{['↗','✦','▤'][i]}</span><h3 className="mt-5 text-lg font-bold">{item.title}</h3><p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p></article>)}</div></div></section>;
+}
